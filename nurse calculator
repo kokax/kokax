@@ -1,0 +1,24 @@
+let sec; // 1방울 소요시간 - 21.03.12 오타수정 bskim
+let ml; //총 주입량
+let hr; //주입시간 
+let gtt; // 15 or 20 의 값을 입력받는다 버튼.
+let minhr; // 시간당 / 분당 확인 변수.
+
+function normalfluid (ml,hr,gtt) {
+  time = (ml/(hr)).toFixed(1);
+  min = (time*gtt/60).toFixed(1);
+  sec = (60/min).toFixed(1);
+  return [time,min,sec]	
+}
+
+function mixedfluid (inmg,ml,mgall,gtt) { 
+  time = (inmg * ml / mgall).toFixed(1);	 // time만 출력하는 수식 이 있어야함
+  min = (time*gtt/60).toFixed(1);
+  sec = (60/min).toFixed(1);
+  return [time,min,sec] 			//3개다 출력하는 것이 있어야함
+								}
+
+function hourlyfluid (inmg,ml,kg,minhr,mgall) {
+  time = (inmg * ml * kg * minhr / mgall).toFixed(1)
+  return time;
+}
