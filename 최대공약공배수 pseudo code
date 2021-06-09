@@ -1,0 +1,54 @@
+두 숫자를 입력 받고, 최대 공약수, 최소 공배수를 콘솔에 출력하는 코드 작성.
+
+
+입력: 두 숫자를 입력받는다.
+
+1. 한개의 숫자만 입력했을 경우.
+2. 두개의 숫자를 입력했을 경우 3,6
+3. 문자와 숫자를 섞어 입력했을 경우.
+4. 문자를 입력했을 경우.
+
+let num1 = prompt('두개의 숫자를 입력해주세요.','2,4'); 정수 값을 입력받는다.
+
+입력 값 num1,num2
+
+처리 :
+입력 num1 또는 num1,num2
+
+	1. 입력 받은 값의 갯수를 확인.
+		a. 2개의 값을 입력받았을 경우.
+			1. num1 = num1.split(",")을 이용해 값을 나눈다.
+			2. int_num1 = num1[0]; int_num2 = num1[1]; 
+		b. 1개의 값을 입력받았을 경우.
+			1. int_num2 = prompt('2번째 숫자를 입력해주세요','1'); 두번째 값을 입력받는다.
+
+	
+	2.num1,num2의 값이 정상인지 확인.
+		a. parseInt(int_num1).toString.length == int_num1.length (int_num1의 값이 숫자인지 길이로 확인)
+			1. true라면  parseInt(int_num2).toString.length == int_num2.length (int_Num2의 값이 숫자인지 길이로 확인)
+				ㄱ.isNaN(parseInt(int_num1))이 || isNaN(parseInt(int_num1)) true가 아닐경우 경우
+					1. key_chk =1;
+				ㄴ. true일 경우
+					1. alert 경고 출력
+
+	3. 최대 공약수 확인
+				max_num = Math.max(int_num1,int_num2);
+				min_num = Math.min(int_num1,int_num2);
+				c. i = max_num
+				d. j = min_num	
+				 	3. while(true)
+				 		a.	y = i%j
+				 		b. if y == 0 
+						a.true max_div = j
+						break;
+						b.palse i = j , j = y	 	 
+			
+
+
+
+	3	. 최소 공배수 확인
+		a. min_mul = (max_num*min_num)/max_div;
+		
+출력.
+		max_div
+		min_mul
